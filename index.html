@@ -1,0 +1,795 @@
+<head>
+	<title>一个破集【x</title>
+	<icon></icon>
+	<link href="./ref/stylesheet.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="./pics/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="./pics/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+	<div id="changelink">
+		<br /> 标题: <input id="text1" type="text" /><br /><br /> 链接: <input id="text2" type="text" /><br /><br />
+		<button class="button" onclick="changelink()" />更改!</button>
+	</div>
+	<div id="chat">
+		嘿~ 我叫狗干嘛，我嘛也不干，你可以在设置中将我隐藏。<br />
+	</div>
+	<div id="helper" class="helper">
+		<img id="dogx_0" src="./pics/dogx_0.png" />
+		<img id="dogx_1" src="./pics/dogx_1.png" /></div>
+	<div id="side">
+		<div id="sidelist">
+			<center>
+				<button class="button" onclick="showadd()">添加项</button>
+				<button class="button" onclick="showdelete()">删除项</button>
+			</center>
+			<div id="cuslist">
+				<div class="line">
+					<input type='checkbox' id="delete1"><label for="delete1" id="label1"></label><a target="_blank" id="item1"></a></button>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete2"><label for="delete2" id="label2"></label><a target="_blank" id="item2"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete3"><label for="delete3" id="label3"></label><a target="_blank" id="item3"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete4"><label for="delete4" id="label4"></label><a target="_blank" id="item4"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete5"><label for="delete5" id="label5"></label><a target="_blank" id="item5"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete6"><label for="delete6" id="label6"></label><a target="_blank" id="item6"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete7"><label for="delete7" id="label7"></label><a target="_blank" id="item7"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete8"><label for="delete8" id="label8"></label><a target="_blank" id="item8"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete9"><label for="delete9" id="label9"></label><a target="_blank" id="item9"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete10"><label for="delete10" id="label10"></label><a target="_blank" id="item10"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete11"><label for="delete11" id="label11"></label><a target="_blank" id="item11"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete12"><label for="delete12" id="label12"></label><a target="_blank" id="item12"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete13"><label for="delete13" id="label13"></label><a target="_blank" id="item13"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete14"><label for="delete14" id="label14"></label><a target="_blank" id="item14"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete15"><label for="delete15" id="label15"></label><a target="_blank" id="item15"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete16"><label for="delete16" id="label16"></label><a target="_blank" id="item16"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete17"><label for="delete17" id="label17"></label><a target="_blank" id="item17"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete18"><label for="delete18" id="label18"></label><a target="_blank" id="item18"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete19"><label for="delete19" id="label19"></label><a target="_blank" id="item19"></a>
+				</div>
+				<div class="line">
+					<input type='checkbox' id="delete20"><label for="delete20" id="label20"></label><a target="_blank" id="item20"></a>
+				</div>
+			</div>
+			<center>
+				<div class="hint">点击上方按钮自定义您的列表。
+				</div>
+				<div id="addingbox"><br /> 标题: <input id="text3" type="text" /> <br /> 链接: <input id="text4" type="text" /> <br /><br />
+					<button class="button" onclick="inputadd()" />添加!</button>
+					<button class="button" onclick="hideadd()" />取消</button>
+				</div>
+				<div id="deletingbox">
+					请勾选要删除的链接。<br /><br />
+					<button class="button" onclick="deleteitem()" />删除!</button>
+					<button class="button" onclick="hidedelete()" />取消</button><br /><br />
+					<button class="squarebutton" onclick="chooseall()">全选</button>
+					<button class="squarebutton" onclick="clearall()">清除</button>
+					<button class="squarebutton" onclick="inverseall()">反选</button>
+				</div>
+			</center>
+		</div>
+	</div>
+	<div onclick="touchclick()" style="height:95%">
+		<label for="settings"><img id="seticon" class="button" src="./pics/settings.png"/ ><input type='checkbox' style="display:none" id="settings">
+		<div id="settings" class="settings">
+		<div class='setitem'>
+			选择默认搜索引擎：<br />
+			<input type="radio" name="searchci" id="searchci0" style="display:none"/><label for="searchci0" onclick="setsearchci(0)"></label>必应
+		<input type="radio" name="searchci" id="searchci1" style="display:none" /><label for="searchci1" onclick="setsearchci(1)"></label>谷歌
+	</div>
+	<div class='setitem'>
+		狗干嘛：<br />
+		<input type="radio" name="gammago" id="gamma0" style="display:none" /><label for="gamma0" onclick="gammago(0)"></label>隐藏
+		<input type="radio" name="gammago" id="gamma1" style="display:none" /><label for="gamma1" onclick="gammago(1)"></label>显示
+	</div>
+	</div>
+	</label>
+	<img src="./pics/pin.png" id='pin'>
+	</br>
+	<div style="height:200px">
+		<center>
+			<input title="Search in GoogleScholar" type="image" style="height:80" alt="GoogleScholar" src="./pics/Googlescholar.png" onclick="checkaction(1);" />
+			<input title="Search in Wikipedia" type="image" style="height:80" src="./pics/Wikipedia.png" alt="Wikipedia" onclick="checkaction(2);" />
+			<input title="Search in WolframAlpha" type="image" style="height:80" src="./pics/Wolframalpha.png" alt="Wolframalpha" onclick="checkaction(3);" />
+			<input title="Search in SpringerLink" type="image" style="height:80" src="./pics/Springer.png" alt="Springer" onclick="checkaction(4);" /></br>
+			<div id="searchcard">
+				<a id="tab0" class="searchtab" onclick="setsearchlan(0,0)">必应(简中)</a><a id="tab1" class="searchtab" onclick="setsearchlan(1,0)">必应(英文)</a><a id="tab2" class="searchtab" onclick="setsearchlan(0,1)">谷歌(繁中)</a><a id="tab3" class="searchtab" onclick="setsearchlan(1,1)">谷歌(英文)</a>
+			</div>
+			<div class="searches">
+				<form action="" method="get" name="searches">
+					<input type="submit" style="display:none;" onclick="checkaction(0);" />
+					<input type="image" style="width:0px;heigh:0px" onclick="checkaction(0);" />
+					<input type="text" id="ensearch" name="ensearch" style="display:none" />
+					<input title="default search" id="search" class="box" name="q" type="text" maxlength=60 value="" />
+				</form>
+			</div>
+		</center>
+	</div>
+	<center>
+		<div class="central">
+			<div class="cards">
+				<div class="card">
+					<div>
+						<button class="edit" onclick="showchangelink('link1')"><img src="./pics/edit_0.png"/>编辑</button>
+						<a id="link1" href=""></a>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<button class="edit" onclick="showchangelink('link2')"><img src="./pics/edit_0.png"/>编辑</button>
+						<a id="link2" href=""></a>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<button class="edit" onclick="showchangelink('link3')"><img src="./pics/edit_0.png"/>编辑</button>
+						<a id="link3" href=""></a>
+					</div>
+				</div>
+				<div class="card">
+					<div>
+						<button class="edit" onclick="showchangelink('link4')"><img src="./pics/edit_0.png"/>编辑</button>
+						<a id="link4" href=""></a>
+					</div>
+				</div>
+			</div>
+			<br />
+			<div class="main">
+				<div class="links">
+					<div class="mp" id="mp">
+						<div class="rowo">
+							<div class="more" onmouseover="show(1,0)" onclick="show(1,1)">
+								MORE
+								<div class="icons"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://guides.jstor.org/">JSTOR</a>
+							<a href="https://www.sciencedirect.com/">ScienceDirect</a>
+							<a href="https://www.scopus.com/">Scopus</a>
+							<a href="https://arxiv.org/">Arxiv</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(2,0)" onclick="show(2,1)">
+								MORE
+								<div class="icons" style="background-position:0 -32px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="https://mathoverflow.net/">MathOverfolw</a>
+							<a href="https://mathscinet.ams.org/">MathSciNet</a>
+							<a href="http://www.ams.org/">AMS</a>
+							<a href="http://www.emis.ams.org/">EMIS</a>
+						</div>
+						<div class="rowo">
+							<div class="more" onmouseover="show(3,0)" onclick="show(3,1)">
+								MORE
+								<div class="icons" style="background-position:0 -64px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="https://www.physicsforums.com/">PhysicsForums</a>
+							<a href="https://www.aps.org/">APS</a>
+							<a href="https://stackoverflow.com/">StackOverflow</a>
+							<a href="	https://www.acm.org/">ACM</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(4,0)" onclick="show(4,1)">
+								MORE
+								<div class="icons" style="background-position:0 -96px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://www.1point3acres.com/bbs/">一亩三分地</a>
+							<a href="https://www.researchgate.net/">ResearchGate</a>
+							<a href="https://owl.english.purdue.edu/">PurdueOWL</a>
+							<a href="https://www.sharelatex.com/">ShareLatex</a>
+						</div>
+					</div>
+					<div class="des" id="des">
+						<div class="rowo">
+							<div class="more" onmouseover="show(6,0)" onclick="show(6,1)">
+								MORE
+								<div class="icons" style="background-position:0 -160px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://www.runoob.com/">菜鸟教程</a>
+							<a href="http://www.cocoachina.com/">CocoaChina</a>
+							<a href="https://git.oschina.net">码云</a>
+							<a href="https://github.com">GitHub</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(7,0)" onclick="show(7,1)">
+								MORE
+								<div class="icons" style="background-position:0 -192px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://www.manew.com/">游戏蛮牛</a>
+							<a href="https://indienova.com/">IndieNova</a>
+							<a href="http://forum.china.unity3d.com/forum.php">Unity论坛</a>
+							<a href="https://rpg.blue/">RM论坛</a>
+						</div>
+						<div class="rowo">
+							<div class="more" onmouseover="show(8,0)" onclick="show(8,1)">
+								MORE
+								<div class="icons" style="background-position:0 -224px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="https://www.behance.net/">Behance</a>
+							<a href="http://www.zcool.com.cn/">站酷</a>
+							<a href="https://www.pixiv.net/">Pixiv</a>
+							<a href="https://www.deviantart.com/">DeviantArt</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(9,0)" onclick="show(9,1)">
+								MORE
+								<div class="icons" style="background-position:0 -256px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://www.xiachufang.com/">下厨房</a>
+							<a href="https://www.jianshu.com/">简书</a>
+							<a href="https://sspai.com/">少数派</a>
+							<a href="https://lofter.com/">Lofter</a>
+						</div>
+					</div>
+					<div class="ent" id="ent">
+						<div class="rowo">
+							<div class="more" onmouseover="show(11,0)" onclick="show(11,1)">
+								MORE
+								<div class="icons" style="background-position:0 -320px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://bilibili.com">哔哩哔哩</a>
+							<a href="http://www.nicovideo.jp/">ニコニコ</a>
+							<a href="http://youku.com">优酷动漫</a>
+							<a href="http://youku.com">优酷动漫</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(12,0)" onclick="show(12,1)">
+								MORE
+								<div class="icons" style="background-position:0 -352px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://store.steampowered.com/">Steam</a>
+							<a href="http://www.ign.com/">IGN</a>
+							<a href="https://www.gamepedia.com/">GamePedia</a>
+							<a href="https://www.g-cores.com/">机核网</a>
+						</div>
+						<div class="rowo">
+							<div class="more" onmouseover="show(13,0)" onclick="show(13,1)">
+								MORE
+								<div class="icons" style="background-position:0 -384px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="https://www.zhibo8.cc/">直播吧</a>
+							<a href="https://www.theplayerstribune.com/">球星看台</a>
+							<a href="https://www.hupu.com/">虎扑</a>
+							<a href="https://www.hupu.com/">狗孩【x</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(14,0)" onclick="show(14,1)">
+								MORE
+								<div class="icons" style="background-position:0 -416px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="https://zh.moegirl.org/">萌娘百科</a>
+							<a href="http://fandom.wikia.com/">Fandom</a>
+							<a href="https://www.reddit.com/">reddit</a>
+							<a href="http://www.qdaily.com/">好奇心日报</a>
+						</div>
+					</div>
+					<div class="tool" id="tool">
+						<div class="rowo">
+							<div class="more" onmouseover="show(16,0)" onclick="show(16,1)">
+								MORE
+								<div class="icons" style="background-position:0 -480px;">
+									<div class="together"></div>
+								</div>
+							</div>
+							<a href="https://send.firefox.com/">临时网盘</a>
+							<a href="https://lightpdf.com/">在线pdf</a>
+							<a href="http://www.chinaz.com/">站长之家</a>
+							<a href="https://ifttt.com/">IFTTT</a>
+						</div>
+						<div class="rowe">
+							<div class="more" onmouseover="show(17,0)" onclick="show(17,1)">
+								MORE
+								<div class="icons" style="background-position:0 -512px;"></div>
+								<div class="together"></div>
+							</div>
+							<a href="http://www.dianping.com/">大众点评</a>
+							<a href="https://www.douban.com/">豆瓣</a>
+							<a href="https://www.amazon.com/">Amazon</a>
+							<a href="https://www.taobao.com/">淘宝</a>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="cat">
+					<div class="caticon" onmouseover="changecat('mp')">
+						<img alt="学术" class="mpi0" id="mpi0" src="./pics/study_0.png" />
+						<img alt="学术" class="mpi1" id="mpi1" src="./pics/study_1.png" />
+					</div>
+					<div class="caticon" onmouseover="changecat('des')">
+						<img alt="搞事" class="desi0" id="desi0" src="./pics/idea_0.png" />
+						<img alt="搞事" class="desi1" id="desi1" src="./pics/idea_1.png" />
+					</div>
+					<div class="caticon" onmouseover="changecat('ent')">
+						<img alt="娱乐" class="enti0" id="enti0" src="./pics/play_0.png" />
+						<img alt="娱乐" class="enti1" id="enti1" src="./pics/play_1.png" />
+					</div>
+					<div class="caticon" onmouseover="changecat('tool')">
+						<img alt="其他" class="tooli0" id="tooli0" src="./pics/tools_0.png" />
+						<img alt="其他" class="tooli1" id="tooli1" src="./pics/tools_1.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="float" id="box1">
+			<p class="group">文献/索引</p>
+			<div class="pair"><button class="push"></button><a href="https://arxiv.org/">Arxiv</a></div>
+			<div class="pair"><button class="push"></button><a href="https://login.webofknowledge.com">Web of Science</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.sciencedirect.com/">ScienceDirect</a></div>
+			<div class="pair"><button class="push"></button><a href="http://guides.jstor.org/">JSTOR</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.scopus.com/">Scopus</a></div>
+			<hr />
+			<p class="group">文献管理</p>
+			<div class="pair"><button class="push"></button><a href="https://endnote.com/">Endnote</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.mendeley.com/">Mendeley</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.readcube.com/">ReadCube</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.refworks.com/">RefWorks</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.zotero.org/">Zotero</a></div>
+			<hr />
+			<p class="group">中文资源</p>
+			<div class="pair"><button class="push"></button><a href="http://cnki.net/">知网</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.wanfangdata.com.cn/">万方数据</a></div>
+			<div class="pair"><button class="push"></button><a href="http://opac.calis.edu.cn/">CALIS</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.nstl.gov.cn/">科技数字图书馆</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.nlc.gov.cn/">国图</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.chaoxing.com/">超星</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.sciencenet.cn/">科学网</a></div>
+		</div>
+		<div class="float" id="box2">
+			<p class="group">SubWiki</p>
+			<div class="pair"><button class="push"></button><a href="https://groupprops.subwiki.org/">群论</a></div>
+			<div class="pair"><button class="push"></button><a href="https://diffgeom.subwiki.org/">微分几何</a></div>
+			<div class="pair"><button class="push"></button><a href="https://commalg.subwiki.org/wiki/Main_Page">交换代数</a></div>
+			<div class="pair"><button class="push"></button><a href="https://topospaces.subwiki.org/">拓扑</a></div>
+			<div class="pair"><button class="push"></button><a href="https://number.subwiki.org/wiki/Main_Page">数论</a></div>
+			<hr />
+			<p class="group">资源/工具</p>
+			<div class="pair"><button class="push"></button><a href="https://mathscinet.ams.org/">MathSciNet</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.ams.org/">AMS</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.emis.ams.org/">EMIS</a></div>
+			<div class="pair"><button class="push"></button><a href="https://ncatlab.org/">nLab</a></div>
+			<div class="pair"><button class="push"></button><a href="https://projecteuclid.org/">ProjectEuclid</a></div>
+			<div class="pair"><button class="push"></button><a href="http://mathworld.wolfram.com/">MathWorld</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.numberempire.com/">数字帝国</a></div>
+			<hr />
+			<p class="group">论坛/博客</p>
+			<div class="pair"><button class="push"></button><a href="https://mathoverflow.net/">MathOverfolw</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.mathematicsgre.com/">MathematicsGRE</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.ams.org/publications/notices/whatis/noticesarchive">"What is"</a></div>
+			<div class="pair"><button class="push"></button><a href="https://ncatlab.org/nlab/show/math+blogs">博客合集</a></div>
+			<div class="pair"><button class="push"></button><a href="http://tutorial.math.lamar.edu/">Paul's Online Notes</a></div>
+		</div>
+		<div class="float" id="box3">
+			<p class="group">XJBZL之物理/天文/计算机/科普</p>
+			<div class="pair"><button class="push"></button><a href="https://www.physicsforums.com/">PhysicsForums</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.aps.org/">APS</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www-personal.umich.edu/~pran/jackson/index.html">Jackson答案</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html">'t Hooft</a></div>
+			<div class="pair"><button class="push"></button><a href="https://home.cern/">CERN</a></div>
+			<div class="pair"><button class="push"></button><a href="https://home.cern/topics/large-hadron-collider">LHC</a></div>
+			<div class="pair"><button class="push"></button><a href="http://cepc.ihep.ac.cn/">CEPC【x</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.nasa.gov/">NASA</a></div>
+			<div class="pair"><button class="push"></button><a href="http://stellarium.org/">Stellarium</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.bao.ac.cn/">国台</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.pmo.ac.cn/">紫金山天文台</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.lamost.org/">LAMOST</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.universetoday.com/">UniverseToday</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.wikisky.org/">WikiSky</a></div>
+			<div class="pair"><button class="push"></button><a href="https://heavens-above.com/">Heavens-Above</a></div>
+			<div class="pair"><button class="push"></button><a href="http://bbs.imufu.cn/">牧夫天文论坛</a></div>
+			<div class="pair"><button class="push"></button><a href="https://stackoverflow.com/">StackOverflow</a></div>
+			<div class="pair"><button class="push"></button><a href="	https://www.acm.org/">ACM</a></div>
+			<div class="pair"><button class="push"></button><a href="https://news.ycombinator.com/">HackerNews</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.guokr.com/">果壳</a></div>
+			<div class="pair"><button class="push"></button><a href="http://songshuhui.net/">科学松鼠会</a></div>
+		</div>
+		<div class="float" id="box4">
+			<p class="group">留学申请</p>
+			<div class="pair"><button class="push"></button><a href="http://www.1point3acres.com/bbs/">一亩三分地</a></div>
+			<div class="pair"><button class="push"></button><a href="https://thegradcafe.com/">GradCafe</a></div>
+			<div class="pair"><button class="push"></button><a href="http://toefl.neea.edu.cn/">托福-NEEA</a></div>
+			<div class="pair"><button class="push"></button><a href="http://gre.neea.edu.cn/">GRE-NEEA</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.chinaielts.org/">雅思</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.ets.org/">ETS官网</a></div>
+			<hr />
+			<p class="group">学术写作</p>
+			<div class="pair"><button class="push"></button><a href="https://owl.english.purdue.edu/">PurdueOWL</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.uefap.com/">UEFAP</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.phrasebank.manchester.ac.uk/">PhraseBank</a></div>
+			<div class="pair"><button class="push"></button><a href="https://ludwig.guru/">LudWig</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.sharelatex.com/">ShareLatex</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.overleaf.com/">Overleaf</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.gitbook.com/">GitBook</a></div>
+			<hr />
+			<p class="group">其他</p>
+			<div class="pair"><button class="push"></button><a href="https://academictree.org/">学术族谱</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.ratemyprofessors.com/">RateMyProfessors</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.researchgate.net/">ResearchGate</a></div>
+		</div>
+		<div class="float" id="box5"></div>
+		<div class="float" id="box6">
+			<p class="group">教程/论坛</p>
+			<div class="pair"><button class="push"></button> <a href="http://www.runoob.com/">菜鸟教程</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.w3school.com.cn/">W3School中文站</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.htmldog.com">HtmlDog</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.cocoachina.com/">CocoaChina</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.csdn.net/">CSDN</a></div>
+			<div class="pair"><button class="push"></button><a href="https://codecombat.com/">CodeCombat(推荐墙外访问)</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.codecademy.com/">Codecademy</a></div>
+			<hr />
+			</p>
+			<p class="group">开源平台/编辑器</p>
+			<div class="pair"><button class="push"></button><a href="https://github.com">github</a></div>
+			<div class="pair"><button class="push"></button><a href="https://git.oschina.net">码云</a></div>
+			<div class="pair"><button class="push"></button><a href="https://gitlab.com">gitlab</a></div>
+			<div class="pair"><button class="push"></button><a href="https://atom.io/">Atom</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.gnu.org/software/emacs/">Emacs</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.vim.org/">Vim</a></div>
+			<div class="pair"><button class="push"></button><a href="https://notepad-plus-plus.org/">Notepad++</a></div>
+			<hr />
+			</p>
+			<p class="group">个人用轮</p>
+			<div class="pair"><button class="push"></button><a href="https://hexo.io/">Hexo</a></div>
+			<div class="pair"><button class="push"></button><a href="https://wordpress.org/">Wordpress</a></div>
+			<div class="pair"><button class="push"></button><a href="https://jekyllrb.com/">Jekyll</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.dokuwiki.org/">DocuWiki</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.mediawiki.org/">MediaWiki</a></div>
+			<div class="pair"><button class="push"></button><a href="https://tiddlywiki.com/">TiddlyWiki</a></div>
+			<div class="pair"><button class="push"></button><a href="https://themes.getbootstrap.com/">Bootstrap模板</a></div>
+		</div>
+		<div class="float" id="box7">
+			<p class="group">开发工具</p>
+			<div class="pair"><button class="push"></button><a href="https://www.rpgmakerweb.com">RM系列</a></div>
+			<div class="pair"><button class="push"></button><a href="http://smilegamebuilder.com/en/">SmileGameBuilder</a></div>
+			<div class="pair"><button class="push"></button><a href="https://unity3d.com/">Unity</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.yoyogames.com/gamemaker">GameMakerStudio</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.scirra.com/">Construct</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.cocos2d-x.org/">Cocos2d-x</a></div>
+			<div class="pair"><button class="push"></button><a href="http://smilebasic.com/en/">SmileBasic(：</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.easygamemaker.com/action-game-maker">AGM</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.66rpg.com/redirect/doDownload">橙光</a></div>
+			<div class="pair"><button class="push"></button><a href="http://visualnovelmaker.com/">VNM</a></div>
+			<div class="pair"><button class="push"></button><a href="https://labo.nintendo.com/">Labo【x</a></div>
+			<hr />
+			<p class="group">综合/论坛</p>
+			<div class="pair"><button class="push"></button><a href="http://www.manew.com/">游戏蛮牛</a></div>
+			<div class="pair"><button class="push"></button><a href="https://indienova.com/">IndieNova</a></div>
+			<div class="pair"><button class="push"></button><a href="https://sns.npc6.com/">何苦做游戏</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.indiegames.cn/">独游网</a></div>
+			<div class="pair"><button class="push"></button><a href="	http://www.gameres.com">Gameres</a></div>
+			<div class="pair"><button class="push"></button><a href="https://rpg.blue/">RM论坛</a></div>
+			<div class="pair"><button class="push"></button><a href="http://forum.china.unity3d.com/forum.php">Unity论坛</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.u3dchina.com/forum.php">Unity游戏开发联盟</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.ceeger.com/forum/">Unity盛典</a></div>
+			<hr />
+			<p class="group">素材/辅助</p>
+			<div class="pair"><button class="push"></button><a href="http://rmtemp.lofter.com/">RM素材推广计划</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.xuanpai.com/makers/">蜜汁生成</a></div>
+			<div class="pair"><button class="push"></button><a href="http://donjon.bin.sh/">中世纪生成</a></div>
+			<div class="pair"><button class="push"></button><a href="https://charat.me/en/">纸片人生成</a></div>
+			<div class="pair"><button class="push"></button><a href="https://make.girls.moe">头像生成</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.onlinewahn.de/">特殊图片生成</a></div>
+			<br />
+		</div>
+		<div class="float" id="box8">
+			<p class="group">素材/工具</p>
+			<div class="pair"><button class="push"></button><a href="http://www.ipmfj.com/">MF+即视</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.qiuziti.com/">求字体</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.youziku.com/">有字库</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.iconfont.cn/">IconFont</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.Freepik.cn/">Freepik</a></div>
+			<div class="pair"><button class="push"></button><a href="https://colorhunt.co/">ColorHunt</a></div>
+			<div class="pair"><button class="push"></button><a href="http://nipponcolors.com/">NipponColors</a></div>
+			<div class="pair"><button class="push"></button><a href="http://iconwanted.com/">IconWant</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.nipic.com/index.html">昵图网</a></div>
+			<div class="pair"><button class="push"></button><a href="https://painttool-sai.en.softonic.com/">Sai</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.adobe.com/">Adobe</a></div>
+			<hr />
+			<p class="group">设计/插画</p>
+			<div class="pair"><button class="push"></button><a href="https://www.behance.net/">Behance</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.zcool.com.cn/">站酷</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.pixiv.net/">Pixiv</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.deviantart.com/">DeviantArt</a></div>
+			<div class="pair"><button class="push"></button><a href="https://reeoo.com/">Reeoo</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.lapa.ninja/">Ninja</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.gracg.com/">涂鸦王国</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.drawspace.com/">DrawSpace</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.vcg.com/creative">视觉中国</a></div>
+			<div class="pair"><button class="push"></button><a href="http://shijue.me/">视觉me</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.ui.cn/">UI中国</a></div>
+		</div>
+		<div class="float" id="box9">
+			<p class="group">生活</p>
+			<div class="pair"><button class="push"></button><a href="http://www.xiachufang.com/">下厨房</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.doityourself.com/">DIY家居</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.sogoke.com/">手工客</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.makerbeta.com/">MakerBeta</a></div>
+			<hr />
+			<p class="group">外语/网课</p>
+			<div class="pair"><button class="push"></button><a href="http://www.duolingo.cn/">多邻国</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.hujiang.com/">沪江</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.shanbay.com/">扇贝</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.coursera.org/">Coursera</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.udacity.com/">Udacity</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.mooc-list.com/">MOOC</a></div>
+			<div class="pair"><button class="push"></button><a href="https://mooc.guokr.com/">果壳MOOC</a></div>
+			<div class="pair"><button class="push"></button><a href="https://open.163.com/">网易公开课</a></div>
+			<hr />
+			<p class="group">分享/推荐</p>
+			<div class="pair"><button class="push"></button><a href="http://www.yixi.tv/speech">一席</a></div>
+			<div class="pair"><button class="push"></button><a href="https://sspai.com/">少数派</a></div>
+			<div class="pair"><button class="push"></button><a href="http://liqi.io/">利器</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.appinn.com/">小众软件</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.producthunt.com/">ProductHunt</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.jianshu.com/">简书</a></div>
+			<div class="pair"><button class="push"></button><a href="https://lofter.com/">Lofter</a></div>
+			<div class="pair"><button class="push"></button><a href="https://afdian.net/">爱发电</a></div>
+		</div>
+		<div class="float" id="box10"></div>
+		<div class="float" id="box11">
+			<p class="group">视频网站</p>
+			<div class="pair"><button class="push"></button><a href="http://bilibili.com">哔哩哔哩</a></div>
+			<div class="pair"><button class="push"></button><a href="http://youku.com">优酷</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.iqiyi.com/">爱奇艺</a></div>
+			<div class="pair"><button class="push"></button><a href="https://v.qq.com/">腾讯视频</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.acfun.cn/">ACFun</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.nicovideo.jp/">ニコニコ</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.youtube.com/">YouTube</a></div>
+			<hr />
+			<p class="group">电影</p>
+			<div class="pair"><button class="push"></button><a href="https://www.rottentomatoes.com/">烂番茄</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.imdb.com/">IMDB</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.canistream.it/">CanIStreamIt</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.mtime.com/">时光网</a></div>
+			<div class="pair"><button class="push"></button><a href="https://movie.douban.com/">豆瓣电影</a></div>
+			<hr />
+			<p class="group">音乐</p>
+			<div class="pair"><button class="push"></button><a href="http://music.163.com/">网易云音乐</a></div>
+			<div class="pair"><button class="push"></button><a href="https://y.qq.com/">QQ音乐</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.xiami.com/">虾米音乐</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.spotify.com/">Spotify</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.pandora.com/">Pandora</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.apple.com/itunes/">iTunes</a></div>
+			<div class="pair"><button class="push"></button><a href="http://5sing.kugou.com/">5Sing</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.daveconservatoire.org/">Dave</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.gangqinpu.com/">虫虫钢琴</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.justinguitar.com/">JustinGuitar</a></div>
+			<hr />
+			<p class="group">网漫</p>
+			<div class="pair"><button class="push"></button><a href="http://buttersafe.com/">ButterSafe</a></div>
+			<div class="pair"><button class="push"></button><a href="https://xkcd.com/">XKCD</a></div>
+			<div class="pair"><button class="push"></button><a href="http://phdcomics.com/">PhDComics</a></div>
+			<div class="pair"><button class="push"></button><a href="http://abstrusegoose.com/">AbstruseGoose</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.bunicomic.com/">buni</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.smbc-comics.com/">SMBC</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.optipess.com/">optipess</a></div>
+			<hr />
+		</div>
+		<div class="float" id="box12">
+			<p class="group">综合</p>
+			<div class="pair"><button class="push"></button><a href="http://www.ign.com/">IGN</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.gamepedia.com/">GamePedia</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.g-cores.com/">机核网</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.gamespot.com/">GameSpot</a></div>
+			<div class="pair"><button class="push"></button><a href="http://bbs.ngacn.cc/">NGA论坛</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.neogaf.com/">NeoGAF</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.tgbus.com/">电玩巴士</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.gamersky.com/">游民星空</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.appgame.com/">任玩堂</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.sonkwo.com/">杉果游戏</a></div>
+
+			<hr />
+			<p class="group">热门</p>
+			<div class="pair"><button class="push"></button><a href="https://www.nexusmods.com/">NexusMods</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.dotabuff.com/">DotABuff</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.battlenet.com.cn/">战网</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.mcbbs.net">MC中文站</a></div>
+			<div class="pair"><button class="push"></button><a href="https://minecraft.net/">MC官网</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.laoyuegou.com/">捞月狗</a></div>
+			<hr />
+			<p class="group">在线游戏</p>
+			<div class="pair"><button class="push"></button><a href="http://www.u77.com/">U77</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.66rpg.com/">橙光</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.web-adventures.org/">Text-Adventures</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.playok.com/">PlayOK</a></div>
+			<div class="pair"><button class="push"></button><a href="https://chromedino.com/">Chrome小恐龙</a></div>
+			<hr />
+			<p class="group">Steam相关</p>
+			<div class="pair"><button class="push"></button><a href="http://store.steampowered.com/">Steam</a></div>
+			<div class="pair"><button class="push"></button><a href="https://steamcn.com/">蒸汽动力</a></div>
+			<div class="pair"><button class="push"></button><a href="https://steamdb.info/">SteamDB</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.steamcardexchange.net/">CardExchange</a></div>
+			<div class="pair"><button class="push"></button><a href="https://steamladder.com/">SteamLadder</a></div>
+			<div class="pair"><button class="push"></button><a href="https://steam.tools/">ToolsHub</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.achievementstats.com/">AchievementStats</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.humblebundle.com/">HumbleBundle</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.fanatical.com/en/">Fanitical</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.indiegala.com/dragon">IndieGala</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.dailyindiegame.com/">DIG-Store</a></div>
+			<hr />
+			<p class="group">平台/发行商</p>
+			<div class="pair"><button class="push"></button><a href="https://www.nintendo.com/">任天堂</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.sony.com/entertainment/video-games">PSN</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.xbox.com">X-Box</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.capcom.com">卡普空</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.ea.com/">EA</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.sega.com/">世嘉</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.ubisoft.com/en-GB">育碧</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.blizzard.com/en-us/">暴雪</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.bigfishgames.com/">大鱼</a></div>
+		</div>
+		<div class="float" id="box13">
+			<p class="group">门户</p>
+			<div class="pair"><button class="push"></button><a href="https://www.hupu.com/">虎扑</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.ssports.com/">新英体育</a></div>
+			<div class="pair"><button class="push"></button> <a href="https://www.zhibo8.cc/">直播吧</a></div>
+			<div class="pair"><button class="push"></button> <a href="https://www.espn.com/">ESPN</a></div>
+			<div class="pair"><button class="push"></button> <a href="https://www.theplayerstribune.com/">球星看台</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.skysports.com/">天空体育</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.thesun.co.uk/">太阳报【x</a></div>
+			<div class="pair"><button class="push"></button><a href="https://sports.sina.com.cn">新浪体育</a></div>
+			<div class="pair"><button class="push"></button> <a href="http://sports.sohu.com/">搜狐体育</a></div>
+			<hr />
+			<p class="group">热门赛事</p>
+			<div class="pair"><button class="push"></button><a href="http://www.nba.com/">NBA</a></div>
+			<div class="pair"><button class="push"></button><a href="http://cba-chinaleague.com/">NBA</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.uefa.com/uefachampionsleague/index.html">欧冠</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.premierleague.com/">英超</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.laliga.es/en">西甲</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.csl-china.com/">中超</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.legaseriea.it/en">意甲</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.bundesliga.com/en/">德甲</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.ligue1.com/">法甲</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.mlssoccer.com/">MLS【x</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.wtatennis.com/">WTA</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.atpworldtour.com/">ATP</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.itftennis.com/">ITF</a></div>
+			<div class="pair"><button class="push"></button><a href="http://badminton.sport.org.cn/">中羽</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.formula1.com/">F1</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.diamondleague.com/">钻石联赛</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.nfl.com/">NFL</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.mlb.com/">MLB</a></div>
+		</div>
+		<div class="float" id="box14">
+			<p class="group">社交</p>
+			<div class="pair"><button class="push"></button><a href="https://www.facebook.com/">Facebook</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.ameba.jp/">Ameba</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.renren.com/">人人</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.linkedin.com/">领英</a></div>
+			<div class="pair"><button class="push"></button><a href="https://twitter.com/">Twitter</a></div>
+			<div class="pair"><button class="push"></button><a href="http://weibo.com/">微博</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.quora.com/">Quora</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.zhihu.com/">知乎</a></div>
+			<div class="pair"><button class="push"></button><a href="https://pinterest.com/">Pinterest</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.instagram.com">Ins</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.tumblr.com/">Tumblr</a></div>
+			<hr />
+			<p class="group">资讯/科技</p>
+			<div class="pair"><button class="push"></button><a href="https://www.reddit.com/">reddit</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.qdaily.com/">好奇心日报</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.huxiu.com/">虎嗅网</a></div>
+			<div class="pair"><button class="push"></button><a href="http://36kr.com/">36氪</a></div>
+			<hr />
+			<p class="group">其他</p>
+			<div class="pair"><button class="push"></button><a href="https://zh.moegirl.org/">萌娘百科</a></div>
+			<div class="pair"><button class="push"></button><a href="http://fandom.wikia.com/">Fandom</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.diffen.com/">Diffen</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.urbandictionary.com/">UrbanDictionary</a></div>
+			<div class="pair"><button class="push"></button><a href="https://stackexchange.com/">StackExchange</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.pserhome.com/">转笔者之家</a></div>
+			<div class="pair"><button class="push"></button><a href="https://lolibrary.org/">Lolibrary</a></div>
+		</div>
+		<div class="float" id="box16">
+			<p class="group">同步</p>
+			<div class="pair"><button class="push"></button><a href="https://send.firefox.com/">临时网盘</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.google.com/drive/">GoogleDrive</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.apple.com/icloud/">iCloud</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.dropbox.com/">Dropbox</a></div>
+			<div class="pair"><button class="push"></button><a href="https://office.live.com/start/OneDrive.aspx?">OneDrive</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.box.com/">Box</a></div>
+			<hr />
+			<p class="group">工具</p>
+			<div class="pair"><button class="push"></button><a href="https://ifttt.com/">IFTTT</a></div>
+			<div class="pair"><button class="push"></button><a href="http://channel.me/">Channelme</a></div>
+			<div class="pair"><button class="push"></button><a href="https://fast.com/">网络测速</a></div>
+			<div class="pair"><button class="push"></button><a href="http://test-ipv6.com/">IPV6测速</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.similarsitesearch.com/">相似网站搜索</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.chinaz.com/">站长之家</a></div>
+			<hr />
+			<p class="group">图文编辑</p>
+			<div class="pair"><button class="push"></button><a href="https://lightpdf.com/">在线pdf</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.keyboard-layout-editor.com/">键盘布局图</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.processon.com/">流程图(支持合作)</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.draw.io/">流程图(免登陆)</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.picozu.com/">图片编辑</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.chuangkit.com/">创客贴</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.wenangou.com/">文案狗</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.soogif.com/">GIF素材库+制作</a></div>
+			<div class="pair"><button class="push"></button><a href="	https://giphy.com/">GIF素材</a></div>
+
+		</div>
+		<div class="float" id="box17">
+			<p class="group">购物</p>
+			<div class="pair"><button class="push"></button><a href="https://www.amazon.com/">Amazon</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.taobao.com/">淘宝</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.yamibuy.com/cn/">亚米</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.bestbuy.com/">Bestbuy</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.jd.com/">京东</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.amiami.com/">あみあみ</a></div>
+			<hr />
+			<p class="group">出行</p>
+			<div class="pair"><button class="push"></button><a href="https://www.studentuniverse.com/">StudentUniverse</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.12306.cn/">12306</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.airbnb.com/">Airbnb</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.mafengwo.cn/">马蜂窝</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.tripadvisor.com/">TripAdvisor</a></div>
+			<hr />
+			<p class="group">生活</p>
+			<div class="pair"><button class="push"></button><a href="http://www.dianping.com/">大众点评</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.douban.com/">豆瓣</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.yelp.com/">Yelp</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.duitang.com/">堆糖</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.huaban8.cn/">花瓣</a></div>
+			<hr />
+			<p class="group">放松</p>
+			<div class="pair"><button class="push"></button><a href="http://www.sketchswap.com/">SketchSwap</a></div>
+			<div class="pair"><button class="push"></button><a href="https://www.rainymood.com/">Rainymood</a></div>
+			<div class="pair"><button class="push"></button><a href="http://moodturn.com/">MoodTurn</a></div>
+			<div class="pair"><button class="push"></button><a href="https://thisissand.com/">ThisIsSand</a></div>
+			<div class="pair"><button class="push"></button><a href="http://www.drawastickman.com/">DrawaStickman</a></div>
+			<hr />
+			<p class="group">其他</p>
+			<div class="pair"><button class="push"></button><a href="http://10years.me/">十年后</a></div>
+		</div>
+		<div class="float" id="box18"></div>
+		<div class="float" id="box19"></div>
+		</div>
+	</center>
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="./ref/function.js"></script>

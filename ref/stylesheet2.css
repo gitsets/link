@@ -1,0 +1,49 @@
+.button {
+  height: 35px;
+  border-radius: 35px;
+  background: white;
+}
+
+.button:hover {
+  cursor: hand;
+  background: black;
+  color: white;
+}
+
+#cuslist {
+  position: absolute;
+  top: 200px;
+}
+
+.hint {
+  width: 250px;
+  position: absolute;
+  top: 60px;
+  left: 50px;
+}
+
+#addingbox {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  width: 280px;
+  background: white;
+  display: none;
+}
+
+#deletingbox {
+  z-index: 1;
+  position: absolute;
+  width: 280px;
+  top: 60px;
+  background: white;
+  display: none;
+}
+
+a {
+  color: black;
+  font-size: 15pt;
+  line-height: 1.5em;
+  display: block;
+  text-decoration: none;
+}

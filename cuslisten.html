@@ -1,0 +1,49 @@
+<head>
+  <link href="./ref/stylesheet2.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <center>
+    <button class="button" onclick="showadd()">additem</button>
+    <button class="button" onclick="showdelete()">deleteitem</button>
+  </center>
+  <div id="cuslist">
+    <a target="_blank" id="item1"></a>
+    <a target="_blank" id="item2"></a>
+    <a target="_blank" id="item3"></a>
+    <a target="_blank" id="item4"></a>
+    <a target="_blank" id="item5"></a>
+    <a target="_blank" id="item6"></a>
+    <a target="_blank" id="item7"></a>
+    <a target="_blank" id="item8"></a>
+    <a target="_blank" id="item9"></a>
+    <a target="_blank" id="item10"></a>
+  </div>
+
+  <div class="hint">
+    <br /> Click the buttons above to edit your links.
+  </div>
+  <center>
+    <div id="addingbox">
+      title: <input id="text3" type="text" /> <br /> link: <input id="text4" type="text" /> <br />
+      <button class="button" onclick="additem()" />Add!</button>
+      <button class="button" onclick="hideadd()" />Cancel</button>
+    </div>
+    <div id="deletingbox">Link to delete: <select id="linknumber">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option></select><br /><br />
+      <button class="button" onclick="deleteitem()" />Delete!</button>
+      <button class="button" onclick="hidedelete()" />Cancel</button>
+    </div>
+  </center>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="./ref/function2.js"></script>
