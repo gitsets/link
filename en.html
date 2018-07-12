@@ -1,0 +1,266 @@
+<head>
+	<link href="./ref/stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="changelink">
+		<br /> title: <input id="text1" type="text" /><br /><br /> link: <input id="text2" type="text" /><br /><br />
+		<button class="button" onclick="changelink()" />Change!</button>
+	</div>
+	<div id="chat">
+		Hi~ I'm Gamma Go. I'm here to help you with nothing.<br />
+	</div>
+	<div id="helper" class="helper">
+		<img id="dogx_0" src="./pics/dogx_0.png" />
+		<img id="dogx_1" src="./pics/dogx_1.png" /></div>
+	<div onclick="touchclick()" style="height:95%">
+		<label for="settings"><img id="seticon" class="button" src="./pics/settings.png"/ style="position:absolute;right:150px;"><input type='checkbox' style="display:none" id="settings">
+				<div id="settings" class="settings">
+					Default search engine:<br />
+					<a onclick="setsearchci(0)">Bing</a>
+							<a onclick="setsearchci(1)">Google</a>
+				</div></label>
+		<img src="./pics/pin.png" id='pin'>
+		<div id="side">
+			<iframe src="./cuslisten.html" scrolling="yes"></iframe>
+		</div>
+		</br>
+		<div style="height:200px">
+			<center>
+				<input title="Search in GoogleScholar" type="image" style="height:80" alt="GoogleScholar" src="./pics/Googlescholar.png" onclick="checkaction(1);" />
+				<input title="Search in Wikipedia" type="image" style="height:80" src="./pics/Wikipedia.png" alt="Wikipedia" onclick="checkaction(2);" />
+				<input title="Search in WolframAlpha" type="image" style="height:80" src="./pics/Wolframalpha.png" alt="Wolframalpha" onclick="checkaction(3);" />
+				<input title="Search in SpringerLink" type="image" style="height:80" src="./pics/Springer.png" alt="Springer" onclick="checkaction(4);" /></br>
+				<div id="searchcard">
+					<a id="tab0" class="searchtab" onclick="setsearchlan(0,0)">Bing(ZH)</a><a id="tab1" class="searchtab" onclick="setsearchlan(1,0)">Bing(EN)</a><a id="tab2" class="searchtab" onclick="setsearchlan(0,1)">Google(CN)</a><a id="tab3" class="searchtab"
+					  onclick="setsearchlan(1,1)">Google(EN)</a>
+				</div>
+				<div class="searches">
+					<form action="" method="get" name="searches">
+						<input type="submit" style="display:none;" onclick="checkaction(0);" />
+						<input type="image" style="width:0px;heigh:0px" onclick="checkaction(0);" />
+						<input type="text" id="ensearch" name="ensearch" style="display:none" />
+						<input title="default search" id="search" class="box" name="q" type="text" maxlength=60 value="" />
+					</form>
+				</div>
+			</center>
+		</div>
+		<center>
+			<div class="central">
+				<div class="cards">
+					<div class="card">
+						<div>
+							<button class="edit" onclick="showchangelink('link1')"><img src="./pics/edit_0.png"/>edit</button>
+							<a id="link1" href=""></a>
+						</div>
+					</div>
+					<div class="card">
+						<div>
+							<button class="edit" onclick="showchangelink('link2')"><img src="./pics/edit_0.png"/>edit</button>
+							<a id="link2" href=""></a>
+						</div>
+					</div>
+					<div class="card">
+						<div>
+							<button class="edit" onclick="showchangelink('link3')"><img src="./pics/edit_0.png"/>edit</button>
+							<a id="link3" href=""></a>
+						</div>
+					</div>
+					<div class="card">
+						<div>
+							<button class="edit" onclick="showchangelink('link4')"><img src="./pics/edit_0.png"/>edit</button>
+							<a id="link4" href=""></a>
+						</div>
+					</div>
+				</div>
+				<br />
+				<div class="main">
+					<div class="links">
+						<div class="mp" id="mp">
+							<div class="rowo">
+								<div class="more" onmouseover="show(1,0)" onclick="show(1,1)">
+									MORE<img src="./pics/Doc.png" />
+								</div>
+								<a href="https://www.sciencedirect.com/">ScienceDirect</a>
+								<a href="https://arxiv.org/">Arxiv</a>
+							</div>
+							<div class="rowe">
+								<div class="more" onmouseover="show(2,0)" onclick="show(2,1)">
+									MORE<img src="./pics/Math.png" />
+								</div>
+								<a href="https://mathscinet.ams.org/">MathSciNet</a>
+							</div>
+							<div class="rowo">
+								<div class="more" onmouseover="show(3,0)" onclick="show(3,1)">
+									MORE<img src="./pics/Phys.png" />
+								</div>
+								<a href="https://faculty.math.illinois.edu/~ruiloja/">Prof.Fernandes</a>
+								<a href="http://www.staff.science.uu.nl/~gadda001/goodtheorist/index.html">'t Hooft</a>
+							</div>
+							<div class="rowe">
+								<div class="more" onmouseover="show(3,0)" onclick="show(3,1)">
+									MORE<img src="./pics/Studym.png" />
+								</div>
+								<a href="https://owl.english.purdue.edu/">PurdueOWL</a>
+							</div>
+							<div class="rowo">
+								<a href="http://www.ams.org/">AMS</a>
+								<a href="https://www.springer.com/">Springer</a>
+							</div>
+						</div>
+						<div class="des" id="des">
+							<div class="rowo">
+								<div class="more" onmouseover="show(6,0)" onclick="show(6,1)">
+									MORE<img src="./pics/Code.png" />
+								</div>
+								<a href="http://www.runoob.com/">Runoob</a>
+
+								<a href="https://github.com">github</a>
+								<a href="https://git.oschina.net">oschina</a>
+								<a href="https://gitlab.com">gitlab</a>
+							</div>
+							<div class="rowe">
+								<div class="more" onmouseover="show(7,0)" onclick="show(7,1)">
+									MORE<img src="./pics/Gamed.png" />
+								</div>
+								<a href="https://rpg.blue/">new6R</a>
+							</div>
+							<div class="rowo">
+								<div class="more" onmouseover="show(8,0)" onclick="show(8,1)">
+									MORE<img src="./pics/Arts.png" />
+								</div>
+								<a href="http://www.iconfont.cn/">icons</a>
+								<a href="https://www.tumblr.com/">Tumblr</a>
+								<a href="https://www.pixiv.net/">Pixiv</a>
+								<a href="https://www.deviantart.com/">DeviantArt</a>
+							</div>
+						</div>
+						<div class="ent" id="ent">
+							<div class="rowo">
+								<div class="more" onmouseover="show(11,0)" onclick="show(11,1)">
+									MORE<img src="./pics/Anime.png" />
+								</div>
+								<a href="http://bilibili.com">bilibili</a>
+								<a href="http://youku.com">youku</a>
+								<a href="http://www.amiami.com/">Amiami</a>
+								<a href="http://ami.aposet.com/">ShareAnime</a>
+							</div>
+							<div class="rowe">
+								<div class="more" onmouseover="show(12,0)" onclick="show(12,1)">
+									MORE<img src="./pics/Gamep.png" />
+								</div>
+								<a href="http://store.steampowered.com/">Steam</a>
+								<a href="http://beatwo.com/">Beatwo</a>
+							</div>
+							<div class="rowo">
+								<div class="more" onmouseover="show(12,0)" onclick="show(12,1)">
+									MORE<img src="./pics/Sports.png" />
+								</div>
+								<a href="https://hupu.com/">HupuSports</a>
+							</div>
+							<div class="rowe">
+								<a href="https://lolibrary.org/">Lolibrary</a>
+								<a href="http://lo.aposet.com/">LoliLoqi</a>
+								<a href="https://egl.circlly.com/">Lacemarket</a>
+							</div>
+							<div class="rowo">
+								<a href="https://zh.moegirl.org/">MoeGirl</a>
+								<a href="http://fandom.wikia.com/">Fandom</a>
+								<a href="https://www.facebook.com/">facebook</a>
+								<a href="https://twitter.com/">Twitter</a>
+								<a href="http://weibo.com/">Weibo</a>
+							</div>
+						</div>
+						<div class="tool" id="tool">
+							<div class="rowo">
+								<a href="https://courses.illinois.edu/">CourseExplorer</a>
+								<a href="https://webstore.illinois.edu/home/">Webstore</a>
+								<a href="https://uiuc.evanced.info/Dibs/">D!BS</a>
+							</div>
+							<div class="rowe">
+								<div class="more" onmouseover="show(17,0)" onclick="show(17,1)">
+									MORE<img src="./pics/Toolbox.png" />
+								</div>
+								<a href="https://ifttt.com/">IFTTT</a>
+								<a href="https://www.wolframalpha.com/">WolframAlpha</a>
+							</div>
+							<div class="rowo">
+								<div class="more" onmouseover="show(18,0)" onclick="show(18,1)">
+									MORE<img src="./pics/Life.png" />
+								</div>
+								<a href="https://www.icloud.com/">iCloud</a>
+							</div>
+							<div class="rowe">
+								<a href="https://www.amazon.com/">Amazon</a>
+								<a href="https://www.taobao.com/">Taobao</a>
+								<a href="https://www.yamibuy.com/cn/">Yamibuy</a>
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="cat">
+						<div class="caticon" onmouseover="changecat('mp')">
+							<img class="mpi0" id="mpi0" width="60px" src="./pics/study_0.png" />
+							<img class="mpi1" id="mpi1" width="60px" src="./pics/study_1.png" />
+						</div>
+						<div class="caticon" onmouseover="changecat('des')">
+							<img class="desi0" id="desi0" width="60px" src="./pics/idea_0.png" />
+							<img class="desi1" id="desi1" width="60px" src="./pics/idea_1.png" />
+						</div>
+						<div class="caticon" onmouseover="changecat('ent')">
+							<img class="enti0" id="enti0" width="60px" src="./pics/play_0.png" />
+							<img class="enti1" id="enti1" width="60px" src="./pics/play_1.png" />
+						</div>
+						<div class="caticon" onmouseover="changecat('tool')">
+							<img class="tooli0" id="tooli0" width="60px" src="./pics/tools_0.png" />
+							<img class="tooli1" id="tooli1" width="60px" src="./pics/tools_1.png" />
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="float" id="box1">
+				<a href="dfasdf">dsfadsf</a>
+				<a href="dfasdf">dsfadsf</a>
+				<a href="dfasdf">dsfadsf</a> list1
+			</div>
+			<div class="float" id="box2">subwiki
+				<hr /> <a href="https://groupprops.subwiki.org/">Groupprops</a>
+				<a href="https://diffgeom.subwiki.org/">Diffgeom</a>
+				<a href="https://topospaces.subwiki.org/">Topospaces</a>
+				<a href="http://mathworld.wolfram.com/">MathWorld</a>
+				<a href="https://ncatlab.org/">nLab</a></div>
+			<div class="float" id="box3">list3</div>
+			<div class="float" id="box4">list4</div>
+			<div class="float" id="box5">list5</div>
+			<div class="float" id="box6">list6</div>
+			<div class="float" id="box7">list7</div>
+			<div class="float" id="box8">list8</div>
+			<div class="float" id="box9">list9</div>
+			<div class="float" id="box10">list10</div>
+			<div class="float" id="box11">list11</div>
+			<div class="float" id="box12">
+				<p class="group">Steam-related</p>
+				<a href="http://store.steampowered.com/">OfficialCite</a>
+				<a href="https://steamdb.info/">SteamDB</a>
+				<a href="https://steamcn.com/">SteamCN</a>
+				<a href="https://www.steamcardexchange.net/">CardExchange</a>
+				<a href="https://www.humblebundle.com/">HumbleBundle</a>
+				<a href="https://www.fanatical.com/en/">Fanitical</a>
+				<a href="https://www.indiegala.com/dragon">IndieGala</a>
+				<a href="http://www.dailyindiegame.com/">DIG-Store</a>
+				<p class="group">Console</p>
+				<a href="https://www.nintendo.com/">Nintendo</a>
+				<p class="group">General</p>
+				<a href="https://www.g-cores.com/">GameCores</a>
+				<a href="http://bbs.ngacn.cc/">NGACN</a>
+			</div>
+		</center>
+	</div>
+	<div id="bottom">
+		<hr />
+	</div>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/jquery.easyui.min.js"></script>
+<script src="./ref/function.js"></script>

@@ -1,0 +1,53 @@
+<head>
+  <link href="./ref/stylesheet2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <center>
+    <button class="button" onclick="showadd()">添加项</button>
+    <button class="button" onclick="showdelete()">删除项</button>
+  </center>
+  <div id="cuslist">
+    <a target="_blank" id="item1"></a>
+    <a target="_blank" id="item2"></a>
+    <a target="_blank" id="item3"></a>
+    <a target="_blank" id="item4"></a>
+    <a target="_blank" id="item5"></a>
+    <a target="_blank" id="item6"></a>
+    <a target="_blank" id="item7"></a>
+    <a target="_blank" id="item8"></a>
+    <a target="_blank" id="item9"></a>
+    <a target="_blank" id="item10"></a>
+    <a target="_blank" id="item11"></a>
+    <a target="_blank" id="item12"></a>
+    <a target="_blank" id="item13"></a>
+    <a target="_blank" id="item14"></a>
+    <a target="_blank" id="item15"></a>
+    <a target="_blank" id="item16"></a>
+    <a target="_blank" id="item17"></a>
+    <a target="_blank" id="item18"></a>
+    <a target="_blank" id="item19"></a>
+    <a target="_blank" id="item20"></a>
+  </div>
+  <div class="hint">
+    <br /> 点击上方按钮自定义您的列表。
+  </div>
+  <center>
+    <form id="addingbox">
+      标题: <input id="text3" type="text" /> <br /> 链接: <input id="text4" type="text" /> <br /> <br />
+      <input type="submit" style="display:none;" onclick="additem(0);" />
+      <button class="button" onclick="additem(0)" />添加!</button>
+      <button class="button" onclick="hideadd()" />取消</button>
+    </form>
+    <form id="deletingbox">
+      请输入要删除的链接编号:<br /><br />
+      <input type="submit" style="display:none;" onclick="deleteitem();" />
+      <input id="linknumber" type="text" onclick="deleteitem()" /><br /><br />
+      <button class="button" onclick="deleteitem()" />删除!</button>
+      <button class="button" onclick="hidedelete()" />取消</button>
+
+    </form>
+
+  </center>
+</body>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="./ref/function2.js"></script>
